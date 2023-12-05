@@ -8,15 +8,22 @@ function esPositivo(num) {
    // Si el número es negativo ---> "Es negativo".
    // Si el número es 0, devuelve false.
    // Tu código:
-   if(num>0) {
-      return('Es positivo');
-   }
-   else if(num<0) {
-      return('Es negativo');
-   }
-   else if(num==0){
-      return false;
-   }
+
+   // Opcion 1
+
+   // if(num>0) { 
+   //    return('Es positivo');
+   // }
+   // else if(num<0) {
+   //    return('Es negativo');
+   // }
+   // else if(num==0){
+   //    return false;
+   // };
+
+// Opcion 2 
+
+return num > 0? 'Es positivo' : num < 0? 'Es negativo' : false;
 }
 
 function agregarSimboloExclamacion(str) {
@@ -71,23 +78,30 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
-   if(letra==='a'){
-      return('Es vocal');
-   } else if(letra==='e') {
-      return ('Es vocal');
-   }
-   else if(letra==='i') {
-      return ('Es vocal');
-   }
-   else if(letra==='o') {
-      return ('Es vocal');
-   }
-   else if(letra==='u') {
-      return ('Es vocal');
-   }
-   else {
-      return ('Dato incorrecto');
-   }
+   
+   // Opcion 1 
+
+   // if(letra==='a'){
+   //    return('Es vocal');
+   // } else if(letra==='e') {
+   //    return ('Es vocal');
+   // }
+   // else if(letra==='i') {
+   //    return ('Es vocal');
+   // }
+   // else if(letra==='o') {
+   //    return ('Es vocal');
+   // }
+   // else if(letra==='u') {
+   //    return ('Es vocal');
+   // }
+   // else {
+   //    return ('Dato incorrecto');
+   // }
+// Para asegurarnos que las letras ingresadas sean siempre minusculas y no nos de error al agregar una mayuscula usamos:
+
+letra = letra.toLowerCase();
+   return letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u'? 'Es vocal' : 'Dato incorrecto';
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
